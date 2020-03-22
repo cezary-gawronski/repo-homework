@@ -5,15 +5,14 @@
 body {
     margin: 0;
     padding: 0;
-
-
 }
 
 .container {
     --containerWidth: 1100px;
     --galleryWidth: calc(var(--containerWidth) * 0.75);
     max-width: var(--containerWidth);
-    margin: 0 auto;
+    margin: 0 auto 5vw auto;
+    overflow: hidden;
 
     --shadowColor: rgba(0, 0, 0, .4)
 }
@@ -182,22 +181,9 @@ body {
 
 @media (max-width: 1099px) {
 
-    /* .gallery {
-        margin: 0 20px;
-    } */
-
     .gradient {
         margin: 0;
-        height: 18vw;
     }
 
-    .square__item {
-        width: 15vw;
-        height: 15vw;
-    }
 
-    /* .circle__element {
-        width: 12vw;
-        height: 12vw;
-    } */
 }
