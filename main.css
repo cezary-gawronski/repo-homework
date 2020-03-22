@@ -11,7 +11,7 @@ body {
     max-width: 85vw;
     height: 100vh;
     margin: 0 auto;
-    background-color: gray;
+    /* background-color: gray; */
 
 }
 
@@ -19,8 +19,8 @@ body {
     --gradientSize: 250%;
     --gradientPosX: calc(var(--gradientSize)*-.5);
     margin: 20px auto;
-    width: 50vw;
-    height: 90px;
+    width: 70vw;
+    height: 10vw;
     background: linear-gradient(-90deg, blue, red);
     background-size: var(--gradientSize);
     background-position-x: var(--gradientPosX);
@@ -31,21 +31,19 @@ body {
     background-position-x: calc(var(--gradientPosX) - 20vw);
 }
 
-
-.square__item {
-    margin: 20px auto;
-    width: 100px;
-    height: 100px;
-    background-color: #fff;
-    animation-duration: 2s, 2s, 2s;
-    animation-delay: 0s, 2s, 4s;
-    /* animation-fill-mode: backwards; */
-
-
+.square {
+    margin: 15vh 0;
 }
 
-
-
+.square__item {
+    margin: 0px auto;
+    width: 15vw;
+    height: 15vw;
+    background-color: #fff;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.199);
+    animation-duration: 1.5s, 1.5s, 2s;
+    animation-delay: 0s, 1.5s, 3s;
+}
 
 @keyframes rotateXsqr {
     from {
@@ -84,10 +82,71 @@ body {
 
 
 .square__item:hover {
-    /* animation-play-state: paused; */
-    /* animation-name: rotateXsqr, rotateYsqr, scaleSqr; */
-    background-color: yellowgreen;
     animation-name: rotateXsqr, rotateYsqr, scaleSqr;
+}
 
+.circle__element {
+    right: 0px;
+    width: 10vw;
+    height: 10vw;
+    background-color: rgb(33, 102, 231);
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
 
+}
+
+@keyframes all {
+    0% {
+        border-radius: 0;
+        background-color: rgb(33, 102, 231);
+        margin-left: 0vw;
+    }
+
+    25% {
+        background-color: pink;
+        border-radius: 50%;
+    }
+
+    50% {
+        border-radius: 0;
+        margin-left: calc(70vw - 10vw - 4vw);
+        background-color: rgb(33, 102, 231);
+    }
+
+    75% {
+        border-radius: 50%;
+        background-color: pink;
+
+    }
+
+    100% {
+        border-radius: 0;
+        background-color: rgb(33, 102, 231);
+        margin-left: 0vw;
+
+    }
+}
+
+.circle__element:hover {
+    animation-play-state: paused;
+}
+
+.circle {
+
+    margin: 10vw auto;
+    padding: 2vw;
+    width: 70vw;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.199);
+}
+
+.circle:hover .circle__element {
+    animation-name: all;
+
+}
+
+.gallery {
+    max-width: 85vw;
+    display: grid;
 }
