@@ -39,7 +39,7 @@ body {
 
 .square {
   margin: 7vh 0;
-  perspective: 60px;
+  perspective: 13vw;
 }
 
 .square__item {
