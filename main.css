@@ -5,13 +5,14 @@
 body {
     margin: 0;
     padding: 0;
+
+
 }
 
 .container {
     max-width: 85vw;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0 auto;
-    /* background-color: gray; */
 
 }
 
@@ -25,6 +26,16 @@ body {
     background-size: var(--gradientSize);
     background-position-x: var(--gradientPosX);
     transition: background-position-x 1s linear;
+}
+
+@media (max-width: 1129px) {
+
+    .container,
+    .gradient,
+    .gallery {
+        width: 100vw;
+        margin: 0;
+    }
 }
 
 .gradient:hover {
@@ -81,8 +92,17 @@ body {
 }
 
 
+
 .square__item:hover {
     animation-name: rotateXsqr, rotateYsqr, scaleSqr;
+}
+
+.circle {
+
+    margin: 10vw auto;
+    padding: 2vw;
+    width: 70vw;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.199);
 }
 
 .circle__element {
@@ -133,13 +153,6 @@ body {
     animation-play-state: paused;
 }
 
-.circle {
-
-    margin: 10vw auto;
-    padding: 2vw;
-    width: 70vw;
-    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.199);
-}
 
 .circle:hover .circle__element {
     animation-name: all;
@@ -149,4 +162,14 @@ body {
 .gallery {
     max-width: 85vw;
     display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    grid-auto-flow: row;
+}
+
+.gallery__item {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
 }
