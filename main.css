@@ -32,23 +32,27 @@ body {
 }
 
 
-.square {
+.square__item {
     margin: 20px auto;
-    width: 15vw;
-    height: 15vw;
+    width: 100px;
+    height: 100px;
     background-color: #fff;
-    transition-duration: 2s;
-    /* animation-delay: 0s, 2s, 2s; */
+    animation-duration: 2s, 2s, 2s;
+    animation-delay: 0s, 2s, 4s;
+    /* animation-fill-mode: backwards; */
 
 
 }
 
+
+
+
 @keyframes rotateXsqr {
-    0% {
+    from {
         transform: rotateX(0deg);
     }
 
-    100% {
+    to {
         transform: rotateX(180deg);
     }
 }
@@ -68,14 +72,21 @@ body {
         transform: scale(1);
     }
 
-    to {
+    50% {
+
         transform: scale(1.5);
+    }
+
+    to {
+        transform: scale(1);
     }
 }
 
 
-.square:hover {
+.square__item:hover {
     /* animation-play-state: paused; */
+    /* animation-name: rotateXsqr, rotateYsqr, scaleSqr; */
+    background-color: yellowgreen;
     animation-name: rotateXsqr, rotateYsqr, scaleSqr;
 
 
