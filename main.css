@@ -10,8 +10,8 @@ body {
 }
 
 .container {
-    max-width: 85vw;
-    /* height: 100vh; */
+    max-width: 1100px;
+    height: 100vh;
     margin: 0 auto;
 
 }
@@ -20,36 +20,28 @@ body {
     --gradientSize: 250%;
     --gradientPosX: calc(var(--gradientSize)*-.5);
     margin: 20px auto;
-    width: 70vw;
+    width: 100%;
     height: 10vw;
     background: linear-gradient(-90deg, blue, red);
     background-size: var(--gradientSize);
     background-position-x: var(--gradientPosX);
-    transition: background-position-x 1s linear;
+    transition: background-position-x .5s linear;
 }
 
-@media (max-width: 1129px) {
 
-    .container,
-    .gradient,
-    .gallery {
-        width: 100vw;
-        margin: 0;
-    }
-}
 
 .gradient:hover {
-    background-position-x: calc(var(--gradientPosX) - 20vw);
+    background-position-x: calc(var(--gradientPosX) - 35vw);
 }
 
 .square {
-    margin: 15vh 0;
+    margin: 10vh 0;
 }
 
 .square__item {
     margin: 0px auto;
-    width: 15vw;
-    height: 15vw;
+    width: 10vw;
+    height: 10vw;
     background-color: #fff;
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.199);
     animation-duration: 1.5s, 1.5s, 2s;
@@ -160,7 +152,6 @@ body {
 }
 
 .gallery {
-    max-width: 85vw;
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -172,4 +163,21 @@ body {
     object-fit: cover;
     width: 100%;
     height: 300px;
+}
+
+@media (max-width: 1129px) {
+
+    .gallery {
+        margin: 0 30px;
+    }
+
+    .gradient {
+        margin: 0;
+        height: 18vw;
+    }
+
+    .square__item {
+        width: 15vw;
+        height: 15vw;
+    }
 }
