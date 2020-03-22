@@ -90,15 +90,16 @@ body {
 }
 
 .circle {
+  position: relative;
   margin: 0 auto 7vw auto;
-  padding: 2vw;
-  /* width: calc(var(--galleryWidth) * .75); */
+  height: 8vw;
   width: 50vw;
   box-shadow: 0px 0px 9px var(--shadowColor);
 }
 
 .circle__element {
-  right: 0px;
+  position: absolute;
+  margin-left: -21vw;
   width: 5vw;
   height: 5vw;
   background-color: rgb(33, 102, 231);
@@ -109,12 +110,10 @@ body {
 }
 
 @keyframes all {
-  0% {
+  from {
     border-radius: 0;
-    background-color: rgb(33, 102, 231);
-    margin-left: 0vw;
+    margin-left: -21vw;
   }
-
   25% {
     background-color: pink;
     border-radius: 50%;
@@ -122,7 +121,7 @@ body {
 
   50% {
     border-radius: 0;
-    margin-left: calc(50vw - 5vw - 4vw);
+    margin-left: 21vw;
     background-color: rgb(33, 102, 231);
   }
 
@@ -131,10 +130,9 @@ body {
     background-color: pink;
   }
 
-  100% {
+  to {
     border-radius: 0;
-    background-color: rgb(33, 102, 231);
-    margin-left: 0vw;
+    margin-left: -21vw;
   }
 }
 
