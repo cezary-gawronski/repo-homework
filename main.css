@@ -8,8 +8,7 @@ body {
 }
 
 .gradient,
-.square,
-.circle {
+.square {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +89,8 @@ body {
 }
 
 .circle {
-  position: relative;
+  display: flex;
+  align-items: center;
   margin: 0 auto 7vw auto;
   height: 8vw;
   width: 50vw;
@@ -98,8 +98,8 @@ body {
 }
 
 .circle__element {
-  position: absolute;
-  margin-left: -21vw;
+  margin-left: 2vw;
+  transform: translateX(-50%);
   width: 5vw;
   height: 5vw;
   background-color: rgb(33, 102, 231);
@@ -112,7 +112,8 @@ body {
 @keyframes all {
   from {
     border-radius: 0;
-    margin-left: -21vw;
+    margin-left: 2vw;
+    transform: translateX(-50%);
   }
   25% {
     background-color: pink;
@@ -121,7 +122,7 @@ body {
 
   50% {
     border-radius: 0;
-    margin-left: 21vw;
+    margin-left: 50vw;
     background-color: rgb(33, 102, 231);
   }
 
@@ -132,7 +133,8 @@ body {
 
   to {
     border-radius: 0;
-    margin-left: -21vw;
+    margin-left: 2vw;
+    transform: translateX(-50%);
   }
 }
 
