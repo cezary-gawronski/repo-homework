@@ -113,7 +113,6 @@ body {
   from {
     border-radius: 0;
     margin-left: 2vw;
-    /* transform: translateX(-50%); */
   }
   25% {
     background-color: pink;
@@ -123,7 +122,6 @@ body {
   50% {
     border-radius: 0;
     margin-left: 43vw;
-    /* transform: translateX(-50%); */
 
     background-color: rgb(33, 102, 231);
   }
@@ -150,6 +148,7 @@ body {
 
 .gallery {
   max-width: var(--galleryWidth);
+
   margin: 0 auto;
   display: grid;
   grid-gap: 30px;
@@ -168,12 +167,15 @@ body {
 
 .gallery__item:hover {
   transform: scale(1.1);
-  /* border-radius: 15%; */
   filter: saturate(1.2);
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 1024px) {
   .gradient {
     margin: 0;
+  }
+  .gallery {
+    margin: 0 10px;
+    grid-gap: 20px;
   }
 }
