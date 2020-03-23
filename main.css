@@ -99,7 +99,7 @@ body {
 
 .circle__element {
   margin-left: 2vw;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   width: 5vw;
   height: 5vw;
   background-color: rgb(33, 102, 231);
@@ -113,7 +113,7 @@ body {
   from {
     border-radius: 0;
     margin-left: 2vw;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
   }
   25% {
     background-color: pink;
@@ -122,7 +122,9 @@ body {
 
   50% {
     border-radius: 0;
-    margin-left: 50vw;
+    margin-left: 43vw;
+    /* transform: translateX(-50%); */
+
     background-color: rgb(33, 102, 231);
   }
 
@@ -134,7 +136,7 @@ body {
   to {
     border-radius: 0;
     margin-left: 2vw;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
   }
 }
 
